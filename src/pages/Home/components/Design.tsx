@@ -8,7 +8,11 @@ import Uber from "../../../assests/svg/Uber";
 import { Button } from "./Button/Button";
 import styles from "./Design.module.scss";
 
-export const Design = () => {
+interface DesignProps {
+  buttonRef: React.RefObject<HTMLButtonElement | null>; // Типизация пропса buttonRef
+}
+
+export const Design: React.FC<DesignProps> = ({ buttonRef }) => {
   const redirectToSignUp = () => (window.location.href = "#/");
 
   return (
@@ -22,7 +26,8 @@ export const Design = () => {
         </p>
         <div className={styles.wrapperBtns}>
           <div className={styles.btns}>
-            <Button onClick={redirectToSignUp} />
+            {/* Передаем ref в Button */}
+            <Button ref={buttonRef} onClick={redirectToSignUp} />
 
             <button className={styles.plansBtn}>
               <span className="truncate">See our plans</span>

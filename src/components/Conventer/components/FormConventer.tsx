@@ -2,11 +2,11 @@ import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import styles from "./FormConventer.module.scss";
 import SelectWithSearch from "./Select";
-import { supportedCryptos } from "../../constant";
-import { CryptoSymbol } from "../../models";
-import Input from "../../components/Input/Input";
+import { supportedCryptos } from "../../../constant";
+import { CryptoSymbol } from "../../../models";
+import Input from "../../../components/Input/Input";
 import { createPortal } from "react-dom";
-import Spinner from "../../components/Spinner/Spiner";
+import Spinner from "../../../components/Spinner/Spiner";
 import classNames from "classnames";
 
 const options = Object.entries(supportedCryptos).map(([symbol, name]) => ({

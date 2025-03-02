@@ -1,9 +1,10 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { fetchRates } from "../api/home";
+
 import { useEffect, useState } from "react";
 import Conventer from "./Conventer";
 import { validationSchema } from "./validationSchema";
+import { fetchRates } from "../../api/home";
 
 interface Rates {
   [key: string]: {
