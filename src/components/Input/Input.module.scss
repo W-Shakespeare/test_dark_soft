@@ -1,0 +1,18 @@
+.error {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  top: 67px;
+  left: 5px;
+  img {
+    width: 13px;
+    height: 12px;
+  }
+}
+
+.errorText {
+  color: #f71735;
+  font-size: 9px;
+}

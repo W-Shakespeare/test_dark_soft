@@ -1,0 +1,114 @@
+.selectContainer {
+  width: 200px;
+  // position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.selectHeader {
+  padding: 8px 20px 8px 50px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  position: absolute;
+  right: 3px;
+  top: 5%;
+  z-index: 6;
+  max-width: 225px;
+  width: 100%;
+  background-color: #313638;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.wrapperSymbol {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cryptoName {
+  color: #989a9b;
+  line-height: 133%;
+  font-size: 15px;
+}
+
+.cryptoSymbol {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.selectedSymvol {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.selectArrow {
+  transition: transform 0.3s ease; /* Плавное вращение */
+  width: 20px;
+  height: 20px;
+}
+
+.rotated {
+  transform: rotate(-180deg);
+}
+
+.selectDropdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  border-top: unset;
+  background-color: white;
+  z-index: 1;
+  padding: 30px;
+  padding-top: 115px;
+  border-radius: 0.88em;
+  border: 2px solid #eaebeb;
+  pointer-events: none;
+  opacity: 0;
+  transition: all ease 0.3s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: all ease 0.2s;
+  }
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px 30px;
+  border: 2px solid #eaebeb;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  height: 70px;
+  border-radius: 12px;
+  transition: all ease 0.3s;
+  &:focus {
+    border-color: #313638;
+  }
+}
+
+.optionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.optionItem {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.optionItem:hover {
+  background-color: #f0f0f0;
+}
